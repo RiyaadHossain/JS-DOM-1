@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document Object Model</title>
+  </head>
+  <body>
+    <header></header>
+    <main id="main">
+      <article class="blog">
+        <h3>Blog-1</h3>
+        <p id="para1">
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis
+          quae. Quos iste perferendis illo?
+        </p>
+      </article>
+      <article class="blog">
+        <h3>Blog-2</h3>
+        <p>
+          Quisquam fugit, soluta aut delectus magnam aperiam deserunt dolore!
+          Possimus facere deserunt odio nesciunt quae.
+        </p>
+      </article>
+      <article class="blog">
+        <h3>Blog-3</h3>
+        <p>
+          Quisquam exercitationem, nesciunt cupiditate ut nostrum aliquid
+          maiores sequi temporibus, maxime obcaecati sunt placeat unde.
+        </p>
+      </article>
+      <article class="blog">
+        <h3 id="title-4">Blog-4</h3>
+        <p>
+          Vero dignissimos fuga magni, architecto eum quo officia nam suscipit
+          cum inventore debitis. Ullam, beatae.
+        </p>
+      </article>
+    </main>
+
+    <script>
+
+    // Also can create Element and appent in another Element 
+    
+      const h3 = document.createElement("h3");
+      h3.innerText = "Blog-5";
+
+      const para = document.createElement("p");
+      para.innerText =
+        "Vero dignissimos fuga magni, architecto eum quo officia nam suscipit cum inventore debitis. Ullam, beatae. Vero dignissimos fuga magni, architecto eum quo officia nam suscipit cum inventore debitis.";
+
+      const article = document.createElement("article");
+      article.setAttribute("class", "blog")
+      article.appendChild(h3);
+      article.appendChild(para);
+
+      const main = document.querySelector("#main");
+      main.appendChild(article);
+    </script>
+
+    <script src="JS/dom.js"></script>
+  </body>
+</html>
